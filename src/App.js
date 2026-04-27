@@ -1,4 +1,4 @@
-import React, { useState } from "react";//oteennn
+import React, { useState } from "react";//OTEENNNNNN
 import "./App.css";
 
 function App() {
@@ -177,7 +177,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Kobe shoes Store Ecommerce OTEENNNN
+        <h1>Kobe shoes Store Ecommerce
         </h1>
         <div className="view-cart">
           <img
