@@ -17,6 +17,20 @@ function App() {
     setCart(tempArray);
   }
 
+  function addToCartWithKeyboard(event, name, price) {
+    if (event.key === "Enter" || event.key === " ") {
+      addToCart(name, price);
+    }
+  }
+
+  function formatPrice(price) {
+    if (typeof price === "number") {
+      return "$" + price;
+    }
+
+    return price;
+  }
+
   function deleteItem(indexToDelete) {
     const tempArray = [];
     for (let i = 0; i < cart.length; i++) {
@@ -33,7 +47,7 @@ function App() {
     } else {
       let message = "Items in your cart:\n";
       for (let i = 0; i < cart.length; i++) {
-        message += "- " + cart[i].name + " ($" + cart[i].price + ")\n";
+        message += "- " + cart[i].name + " (" + formatPrice(cart[i].price) + ")\n";
       }
       alert(message);
       setCart([]);
@@ -53,7 +67,8 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Ecommerce Shopay</h1>
+        <h1>Kobe shoes Store Ecommerce
+        </h1>
         <div className="view-cart">
           <img
             src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
@@ -76,152 +91,259 @@ function App() {
       </header>
 
       <div className="main-listing">
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart("Nike Kobe 3 Protro 'Christmas'", "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, "Nike Kobe 3 Protro 'Christmas'", "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
-            alt="shoe"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fp%2Fb7Of7NhpFfuSUnZU9t4tfm0MNifEerPXZcdfBWfU.png&w=3840&q=100"
+            alt="Nike Kobe 3 Protro 'Christmas'"
           />
           <div className="item-cat">
             <div>
-              <h2>Nike G.T Cut Academy 2 EP</h2>
-              <p className="item-price">$99.99</p>
+              <h2>Nike Kobe 3 Protro 'Christmas'</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Nike G.T Cut Academy 2 EP", 99.99)}
+              onClick={() => addToCart("Nike Kobe 3 Protro 'Christmas'", "₱11,495")}
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart("Nike Kobe 4 Protro", "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, "Nike Kobe 4 Protro", "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6ba74c93-d113-4c15-a043-6371207725f9/KOBE+IX+ELITE+LOW+EM+PROTRO.png"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fproducts%2F660x660%2F122691.jpg&w=3840&q=100"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Kobe IX Elite Low EM Protro</h2>
-              <p className="item-price">$129.99</p>
+              <h2>Nike Kobe 4 Protro</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Kobe IX Elite Low EM Protro", 129.99)}
+              onClick={() => addToCart("Nike Kobe 4 Protro", "₱11,495")}
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart("Nike Kobe 4 Protro 'Black Mamba'", "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, "Nike Kobe 4 Protro 'Black Mamba'", "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
+            src="https://static.sneakerjagers.com/p/tprI4OtlC7zA4cVLMgGqpsSt1B90mxtiOggQGXWy.png"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Product 3</h2>
-              <p className="item-price">$149.99</p>
+              <h2>Nike Kobe 4 Protro 'Black Mamba'</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Product 3", 149.99)}
+              onClick={() => addToCart("Nike Kobe 4 Protro 'Black Mamba'", "₱11,495")}
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            addToCart("Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'", "₱11,495")
+          }
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(
+              event,
+              "Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'",
+              "₱11,495",
+            )
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fproducts%2F660x660%2F175931.jpg&w=3840&q=100"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Product 4</h2>
-              <p className="item-price">$149.99</p>
+              <h2>Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Product 4", 149.99)}
+              onClick={() =>
+                addToCart("Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'", "₱11,495")
+              }
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart('Nike Kobe 6 Protro "AllStar"', "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, 'Nike Kobe 6 Protro "AllStar"', "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fp%2F7FuqUM5iGHzqxp23geKO0F8zS2UmdVcBpGWCyySL.png&w=3840&q=100"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Product 5</h2>
-              <p className="item-price">$149.99</p>
+              <h2>Nike Kobe 6 Protro "AllStar"</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Product 5", 149.99)}
+              onClick={() => addToCart('Nike Kobe 6 Protro "AllStar"', "₱11,495")}
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart("Nike Kobe 8 Protro 'What The Kobe'", "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, "Nike Kobe 8 Protro 'What The Kobe'", "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fp%2Fd6wOqHUnsW18hjbRc1JGWpFYg8ysunqsE8oAekT4.png&w=3840&q=100"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Product 6</h2>
-              <p className="item-price">$149.99</p>
+              <h2>Nike Kobe 8 Protro 'What The Kobe'</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Product 6", 149.99)}
+              onClick={() => addToCart("Nike Kobe 8 Protro 'What The Kobe'", "₱11,495")}
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart("Nike Kobe 9 EM Low Protro 'Mambacita'", "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, "Nike Kobe 9 EM Low Protro 'Mambacita'", "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fp%2FBIrruJLwRJZ07lWg1gGXKWgUNeev4rkbRNLmQmNc.png&w=3840&q=100"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Product 7</h2>
-              <p className="item-price">$149.99</p>
+              <h2>Nike Kobe 9 EM Low Protro 'Mambacita'</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Product 7", 149.99)}
+              onClick={() => addToCart("Nike Kobe 9 EM Low Protro 'Mambacita'", "₱11,495")}
             >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div className="grid-item">
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() => addToCart("Nike Kobe 11 Protro 'Mamba Day'", "₱11,495")}
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(event, "Nike Kobe 11 Protro 'Mamba Day'", "₱11,495")
+          }
+        >
           <img
-            src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58d1baa8-21db-4f8a-8ceb-dd7cba685e78/AIR+ZOOM+G.T.+CUT+ACADEMY+2+EP.png"
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fp%2FYq4YxXirwN87FOOl3lepfuAixYC3DyAPtprAnc5P.png&w=3840&q=75"
             alt="shoe"
           />
           <div className="item-cat">
             <div>
-              <h2>Product 8</h2>
-              <p className="item-price">$149.99</p>
+              <h2>Nike Kobe 11 Protro 'Mamba Day'</h2>
+              <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => addToCart("Product 8", 149.99)}
+              onClick={() => addToCart("Nike Kobe 11 Protro 'Mamba Day'", "₱11,495")}
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            addToCart("Kobe Bryant x Nike Air Force 1 Low 'Court Purple'", "₱8,495")
+          }
+          onKeyDown={(event) =>
+            addToCartWithKeyboard(
+              event,
+              "Kobe Bryant x Nike Air Force 1 Low 'Court Purple'",
+              "₱8,495",
+            )
+          }
+        >
+          <img
+            src="https://thedropdate.com/_next/image?url=https%3A%2F%2Fstatic.sneakerjagers.com%2Fp%2FRipi7WWKZ5gE6zC5OAmsz8FkbvqGKfiKJdtwOqyq.png&w=3840&q=100"
+            alt="Kobe Bryant x Nike Air Force 1 Low 'Court Purple'"
+          />
+          <div className="item-cat">
+            <div>
+              <h2>Kobe Bryant x Nike Air Force 1 Low 'Court Purple'</h2>
+              <p className="item-price">₱8,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                addToCart("Kobe Bryant x Nike Air Force 1 Low 'Court Purple'", "₱8,495")
+              }
             >
               Add to Cart
             </button>
