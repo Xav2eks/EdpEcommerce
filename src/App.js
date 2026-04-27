@@ -1,4 +1,4 @@
-import React, { useState } from "react";//OTEENNNNNN
+import React, { useState } from "react"; //OTEN NAKO
 import "./App.css";
 
 function App() {
@@ -164,7 +164,18 @@ function App() {
     );
   }
 
-  const sizeOptions = ["8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12", "12.5"];
+  const sizeOptions = [
+    "8",
+    "8.5",
+    "9",
+    "9.5",
+    "10",
+    "10.5",
+    "11",
+    "11.5",
+    "12",
+    "12.5",
+  ];
   const sizeButtonsUI = [];
   for (let i = 0; i < sizeOptions.length; i++) {
     sizeButtonsUI.push(
@@ -177,8 +188,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Kobe shoes Store Ecommerce
-        </h1>
+        <h1>Kobe shoes Store Ecommerce</h1>
         <div className="view-cart">
           <img
             src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
@@ -257,15 +267,23 @@ function App() {
           className="grid-item"
           role="button"
           tabIndex="0"
-          onClick={() => chooseProduct("Nike Kobe 3 Protro 'Christmas'", "₱11,495", kobe3Image)}
+          onClick={() =>
+            chooseProduct(
+              "Nike Kobe 3 Protro 'Christmas'",
+              "₱11,495",
+              kobe3Image,
+            )
+          }
           onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, "Nike Kobe 3 Protro 'Christmas'", "₱11,495", kobe3Image)
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 3 Protro 'Christmas'",
+              "₱11,495",
+              kobe3Image,
+            )
           }
         >
-          <img
-            src={kobe3Image}
-            alt="Nike Kobe 3 Protro 'Christmas'"
-          />
+          <img src={kobe3Image} alt="Nike Kobe 3 Protro 'Christmas'" />
           <div className="item-cat">
             <div>
               <h2>Nike Kobe 3 Protro 'Christmas'</h2>
@@ -273,96 +291,12 @@ function App() {
             </div>
             <button
               className="add-to-cart"
-              onClick={() => chooseProduct("Nike Kobe 3 Protro 'Christmas'", "₱11,495", kobe3Image)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="grid-item"
-          role="button"
-          tabIndex="0"
-          onClick={() => chooseProduct("Nike Kobe 4 Protro", "₱11,495", kobe4Image)}
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, "Nike Kobe 4 Protro", "₱11,495", kobe4Image)
-          }
-        >
-          <img
-            src={kobe4Image}
-            alt="shoe"
-          />
-          <div className="item-cat">
-            <div>
-              <h2>Nike Kobe 4 Protro</h2>
-              <p className="item-price">₱11,495</p>
-            </div>
-            <button
-              className="add-to-cart"
-              onClick={() => chooseProduct("Nike Kobe 4 Protro", "₱11,495", kobe4Image)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="grid-item"
-          role="button"
-          tabIndex="0"
-          onClick={() => chooseProduct("Nike Kobe 4 Protro 'Black Mamba'", "₱11,495", blackMambaImage)}
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, "Nike Kobe 4 Protro 'Black Mamba'", "₱11,495", blackMambaImage)
-          }
-        >
-          <img
-            src={blackMambaImage}
-            alt="shoe"
-          />
-          <div className="item-cat">
-            <div>
-              <h2>Nike Kobe 4 Protro 'Black Mamba'</h2>
-              <p className="item-price">₱11,495</p>
-            </div>
-            <button
-              className="add-to-cart"
-              onClick={() => chooseProduct("Nike Kobe 4 Protro 'Black Mamba'", "₱11,495", blackMambaImage)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="grid-item"
-          role="button"
-          tabIndex="0"
-          onClick={() =>
-            chooseProduct("Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'", "₱11,495", kobe5Image)
-          }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              "Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'",
-              "₱11,495",
-              kobe5Image,
-            )
-          }
-        >
-          <img
-            src={kobe5Image}
-            alt="shoe"
-          />
-          <div className="item-cat">
-            <div>
-              <h2>Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'</h2>
-              <p className="item-price">₱11,495</p>
-            </div>
-            <button
-              className="add-to-cart"
               onClick={() =>
-                chooseProduct("Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'", "₱11,495", kobe5Image)
+                chooseProduct(
+                  "Nike Kobe 3 Protro 'Christmas'",
+                  "₱11,495",
+                  kobe3Image,
+                )
               }
             >
               Add to Cart
@@ -374,104 +308,29 @@ function App() {
           className="grid-item"
           role="button"
           tabIndex="0"
-          onClick={() => chooseProduct('Nike Kobe 6 Protro "AllStar"', "₱11,495", kobe6Image)}
+          onClick={() =>
+            chooseProduct("Nike Kobe 4 Protro", "₱11,495", kobe4Image)
+          }
           onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, 'Nike Kobe 6 Protro "AllStar"', "₱11,495", kobe6Image)
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 4 Protro",
+              "₱11,495",
+              kobe4Image,
+            )
           }
         >
-          <img
-            src={kobe6Image}
-            alt="shoe"
-          />
+          <img src={kobe4Image} alt="shoe" />
           <div className="item-cat">
             <div>
-              <h2>Nike Kobe 6 Protro "AllStar"</h2>
+              <h2>Nike Kobe 4 Protro</h2>
               <p className="item-price">₱11,495</p>
             </div>
             <button
               className="add-to-cart"
-              onClick={() => chooseProduct('Nike Kobe 6 Protro "AllStar"', "₱11,495", kobe6Image)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="grid-item"
-          role="button"
-          tabIndex="0"
-          onClick={() => chooseProduct("Nike Kobe 8 Protro 'What The Kobe'", "₱11,495", kobe8Image)}
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, "Nike Kobe 8 Protro 'What The Kobe'", "₱11,495", kobe8Image)
-          }
-        >
-          <img
-            src={kobe8Image}
-            alt="shoe"
-          />
-          <div className="item-cat">
-            <div>
-              <h2>Nike Kobe 8 Protro 'What The Kobe'</h2>
-              <p className="item-price">₱11,495</p>
-            </div>
-            <button
-              className="add-to-cart"
-              onClick={() => chooseProduct("Nike Kobe 8 Protro 'What The Kobe'", "₱11,495", kobe8Image)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="grid-item"
-          role="button"
-          tabIndex="0"
-          onClick={() => chooseProduct("Nike Kobe 9 EM Low Protro 'Mambacita'", "₱11,495", kobe9Image)}
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, "Nike Kobe 9 EM Low Protro 'Mambacita'", "₱11,495", kobe9Image)
-          }
-        >
-          <img
-            src={kobe9Image}
-            alt="shoe"
-          />
-          <div className="item-cat">
-            <div>
-              <h2>Nike Kobe 9 EM Low Protro 'Mambacita'</h2>
-              <p className="item-price">₱11,495</p>
-            </div>
-            <button
-              className="add-to-cart"
-              onClick={() => chooseProduct("Nike Kobe 9 EM Low Protro 'Mambacita'", "₱11,495", kobe9Image)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="grid-item"
-          role="button"
-          tabIndex="0"
-          onClick={() => chooseProduct("Nike Kobe 11 Protro 'Mamba Day'", "₱11,495", kobe11Image)}
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(event, "Nike Kobe 11 Protro 'Mamba Day'", "₱11,495", kobe11Image)
-          }
-        >
-          <img
-            src={kobe11Image}
-            alt="shoe"
-          />
-          <div className="item-cat">
-            <div>
-              <h2>Nike Kobe 11 Protro 'Mamba Day'</h2>
-              <p className="item-price">₱11,495</p>
-            </div>
-            <button
-              className="add-to-cart"
-              onClick={() => chooseProduct("Nike Kobe 11 Protro 'Mamba Day'", "₱11,495", kobe11Image)}
+              onClick={() =>
+                chooseProduct("Nike Kobe 4 Protro", "₱11,495", kobe4Image)
+              }
             >
               Add to Cart
             </button>
@@ -483,7 +342,253 @@ function App() {
           role="button"
           tabIndex="0"
           onClick={() =>
-            chooseProduct("Kobe Bryant x Nike Air Force 1 Low 'Court Purple'", "₱8,495", airForceImage)
+            chooseProduct(
+              "Nike Kobe 4 Protro 'Black Mamba'",
+              "₱11,495",
+              blackMambaImage,
+            )
+          }
+          onKeyDown={(event) =>
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 4 Protro 'Black Mamba'",
+              "₱11,495",
+              blackMambaImage,
+            )
+          }
+        >
+          <img src={blackMambaImage} alt="shoe" />
+          <div className="item-cat">
+            <div>
+              <h2>Nike Kobe 4 Protro 'Black Mamba'</h2>
+              <p className="item-price">₱11,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                chooseProduct(
+                  "Nike Kobe 4 Protro 'Black Mamba'",
+                  "₱11,495",
+                  blackMambaImage,
+                )
+              }
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            chooseProduct(
+              "Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'",
+              "₱11,495",
+              kobe5Image,
+            )
+          }
+          onKeyDown={(event) =>
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'",
+              "₱11,495",
+              kobe5Image,
+            )
+          }
+        >
+          <img src={kobe5Image} alt="shoe" />
+          <div className="item-cat">
+            <div>
+              <h2>Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'</h2>
+              <p className="item-price">₱11,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                chooseProduct(
+                  "Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'",
+                  "₱11,495",
+                  kobe5Image,
+                )
+              }
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            chooseProduct('Nike Kobe 6 Protro "AllStar"', "₱11,495", kobe6Image)
+          }
+          onKeyDown={(event) =>
+            chooseProductWithKeyboard(
+              event,
+              'Nike Kobe 6 Protro "AllStar"',
+              "₱11,495",
+              kobe6Image,
+            )
+          }
+        >
+          <img src={kobe6Image} alt="shoe" />
+          <div className="item-cat">
+            <div>
+              <h2>Nike Kobe 6 Protro "AllStar"</h2>
+              <p className="item-price">₱11,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                chooseProduct(
+                  'Nike Kobe 6 Protro "AllStar"',
+                  "₱11,495",
+                  kobe6Image,
+                )
+              }
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            chooseProduct(
+              "Nike Kobe 8 Protro 'What The Kobe'",
+              "₱11,495",
+              kobe8Image,
+            )
+          }
+          onKeyDown={(event) =>
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 8 Protro 'What The Kobe'",
+              "₱11,495",
+              kobe8Image,
+            )
+          }
+        >
+          <img src={kobe8Image} alt="shoe" />
+          <div className="item-cat">
+            <div>
+              <h2>Nike Kobe 8 Protro 'What The Kobe'</h2>
+              <p className="item-price">₱11,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                chooseProduct(
+                  "Nike Kobe 8 Protro 'What The Kobe'",
+                  "₱11,495",
+                  kobe8Image,
+                )
+              }
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            chooseProduct(
+              "Nike Kobe 9 EM Low Protro 'Mambacita'",
+              "₱11,495",
+              kobe9Image,
+            )
+          }
+          onKeyDown={(event) =>
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 9 EM Low Protro 'Mambacita'",
+              "₱11,495",
+              kobe9Image,
+            )
+          }
+        >
+          <img src={kobe9Image} alt="shoe" />
+          <div className="item-cat">
+            <div>
+              <h2>Nike Kobe 9 EM Low Protro 'Mambacita'</h2>
+              <p className="item-price">₱11,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                chooseProduct(
+                  "Nike Kobe 9 EM Low Protro 'Mambacita'",
+                  "₱11,495",
+                  kobe9Image,
+                )
+              }
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            chooseProduct(
+              "Nike Kobe 11 Protro 'Mamba Day'",
+              "₱11,495",
+              kobe11Image,
+            )
+          }
+          onKeyDown={(event) =>
+            chooseProductWithKeyboard(
+              event,
+              "Nike Kobe 11 Protro 'Mamba Day'",
+              "₱11,495",
+              kobe11Image,
+            )
+          }
+        >
+          <img src={kobe11Image} alt="shoe" />
+          <div className="item-cat">
+            <div>
+              <h2>Nike Kobe 11 Protro 'Mamba Day'</h2>
+              <p className="item-price">₱11,495</p>
+            </div>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                chooseProduct(
+                  "Nike Kobe 11 Protro 'Mamba Day'",
+                  "₱11,495",
+                  kobe11Image,
+                )
+              }
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="grid-item"
+          role="button"
+          tabIndex="0"
+          onClick={() =>
+            chooseProduct(
+              "Kobe Bryant x Nike Air Force 1 Low 'Court Purple'",
+              "₱8,495",
+              airForceImage,
+            )
           }
           onKeyDown={(event) =>
             chooseProductWithKeyboard(
@@ -506,7 +611,12 @@ function App() {
             <button
               className="add-to-cart"
               onClick={() =>
-                chooseProduct("Kobe Bryant x Nike Air Force 1 Low 'Court Purple'", "₱8,495", airForceImage)              }
+                chooseProduct(
+                  "Kobe Bryant x Nike Air Force 1 Low 'Court Purple'",
+                  "₱8,495",
+                  airForceImage,
+                )
+              }
             >
               Add to Cart
             </button>
