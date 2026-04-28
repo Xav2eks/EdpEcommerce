@@ -50,12 +50,6 @@ function App() {
     });
   }
 
-  function chooseProductWithKeyboard(event, name, price, image) {
-    if (event.key === "Enter" || event.key === " ") {
-      chooseProduct(name, price, image);
-    }
-  }
-
   function chooseSize(size) {
     if (productToBuy !== null) {
       const newItemId = addToCart(
@@ -274,14 +268,6 @@ function App() {
               kobe3Image,
             )
           }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              "Nike Kobe 3 Protro 'Christmas'",
-              "₱11,495",
-              kobe3Image,
-            )
-          }
         >
           <img src={kobe3Image} alt="Nike Kobe 3 Protro 'Christmas'" />
           <div className="item-cat">
@@ -311,14 +297,6 @@ function App() {
           onClick={() =>
             chooseProduct("Nike Kobe 4 Protro", "₱11,495", kobe4Image)
           }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              "Nike Kobe 4 Protro",
-              "₱11,495",
-              kobe4Image,
-            )
-          }
         >
           <img src={kobe4Image} alt="shoe" />
           <div className="item-cat">
@@ -343,14 +321,6 @@ function App() {
           tabIndex="0"
           onClick={() =>
             chooseProduct(
-              "Nike Kobe 4 Protro 'Black Mamba'",
-              "₱11,495",
-              blackMambaImage,
-            )
-          }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
               "Nike Kobe 4 Protro 'Black Mamba'",
               "₱11,495",
               blackMambaImage,
@@ -389,14 +359,6 @@ function App() {
               kobe5Image,
             )
           }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              "Nike Kobe 5 Protro Bruce Lee 'Black & Yellow'",
-              "₱11,495",
-              kobe5Image,
-            )
-          }
         >
           <img src={kobe5Image} alt="shoe" />
           <div className="item-cat">
@@ -426,14 +388,6 @@ function App() {
           onClick={() =>
             chooseProduct('Nike Kobe 6 Protro "AllStar"', "₱11,495", kobe6Image)
           }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              'Nike Kobe 6 Protro "AllStar"',
-              "₱11,495",
-              kobe6Image,
-            )
-          }
         >
           <img src={kobe6Image} alt="shoe" />
           <div className="item-cat">
@@ -462,14 +416,6 @@ function App() {
           tabIndex="0"
           onClick={() =>
             chooseProduct(
-              "Nike Kobe 8 Protro 'What The Kobe'",
-              "₱11,495",
-              kobe8Image,
-            )
-          }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
               "Nike Kobe 8 Protro 'What The Kobe'",
               "₱11,495",
               kobe8Image,
@@ -508,14 +454,6 @@ function App() {
               kobe9Image,
             )
           }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              "Nike Kobe 9 EM Low Protro 'Mambacita'",
-              "₱11,495",
-              kobe9Image,
-            )
-          }
         >
           <img src={kobe9Image} alt="shoe" />
           <div className="item-cat">
@@ -549,14 +487,6 @@ function App() {
               kobe11Image,
             )
           }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
-              "Nike Kobe 11 Protro 'Mamba Day'",
-              "₱11,495",
-              kobe11Image,
-            )
-          }
         >
           <img src={kobe11Image} alt="shoe" />
           <div className="item-cat">
@@ -585,14 +515,6 @@ function App() {
           tabIndex="0"
           onClick={() =>
             chooseProduct(
-              "Kobe Bryant x Nike Air Force 1 Low 'Court Purple'",
-              "₱8,495",
-              airForceImage,
-            )
-          }
-          onKeyDown={(event) =>
-            chooseProductWithKeyboard(
-              event,
               "Kobe Bryant x Nike Air Force 1 Low 'Court Purple'",
               "₱8,495",
               airForceImage,
